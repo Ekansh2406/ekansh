@@ -30,8 +30,8 @@ load_dotenv()
 USERNAME = os.getenv("BOOKING_USERNAME") # stored in .env file
 PASSWORD = os.getenv("BOOKING_PASSWORD") # stored in .env file
 BOOKING_URL = "https://oas.iitmandi.ac.in/InstituteProcess/Facility/BusSeatReservation.aspx"
-DESIRED_DATE = "31/01/2025- 09:00"  
-BUS_PATH = "North Campus -To- Mandi (via South)"
+DESIRED_DATE = "31/01/2025- 09:00"   # format: DD/MM/YYYY - HH:MM  # desired date and time of booking  
+BUS_PATH = "North Campus -To- Mandi (via South)" # path of the bus
 
 parsed_date = datetime.strptime(DESIRED_DATE, "%d/%m/%Y- %H:%M")
 booking_release_time = parsed_date - timedelta(days=15)
