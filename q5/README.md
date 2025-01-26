@@ -4,8 +4,17 @@ I have developed a program that automates the process of bus booking and sending
 
 ## Features
 
-- **Automated Bus Booking**: The program automates the bus booking process, making it quick and efficient.
-- **Email Notifications**: Users receive confirmation emails for their bookings using the Gmail API.
+### **Automated Bus Booking**
+The program automates the bus booking process by **automatically opening the OAS website**, making it quick and efficient.
+
+### **Credentials Stored in .env File**
+User credentials are securely stored in a **`.env` file**, ensuring that sensitive information is kept safe.
+
+### **Quick Booking**
+The bus is booked within **15 seconds** when the file is run, providing a fast and reliable booking experience.
+
+### **Email Notifications**
+Users receive confirmation emails for their bookings using the **Gmail API**, ensuring they are promptly informed about their reservations.
 
 ## Gmail API Integration
 
