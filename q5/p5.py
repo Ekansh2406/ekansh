@@ -87,7 +87,8 @@ def book_seat():
 
     time.sleep(0.1)
     seat_checkbox = wait.until(EC.element_to_be_clickable((By.ID, "checkbox1"))).click()
-        
+    # Currently, it will book only seat 1, but we can modify the code to book any empty seat.
+   
     time.sleep(0.1)
     save_button = wait.until(EC.element_to_be_clickable((By.ID, "lnkSave")))
     save_button.click()

@@ -11,7 +11,7 @@ The program automates the bus booking process by **automatically opening the OAS
 User credentials are securely stored in a **`.env` file**, ensuring that sensitive information is kept safe.
 
 ### **Quick Booking**
-The bus is booked within **15 seconds** when the file is run, providing a fast and reliable booking experience.
+The bus is booked within **14 seconds** when the file is run, providing a fast and reliable booking experience. Currently, it will book only seat no.1, but we can modify the code to book any empty seat.
 
 ### **Email Notifications**
 Users receive confirmation emails for their bookings using the **Gmail API**, ensuring they are promptly informed about their reservations.
