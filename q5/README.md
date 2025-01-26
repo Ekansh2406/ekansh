@@ -37,6 +37,5 @@ The program will not book buses if the booking is open and the code is not runni
 ### Using Cloud Task Scheduler
 
 1. **Cloud Task Scheduler**: Use a cloud-based task scheduler (e.g., Google Cloud Scheduler, AWS CloudWatch Events) to run the program 15 days earlier than the desired time.
-2. **Configure the Scheduler**: Set up the cloud task scheduler to trigger the program at regular intervals, ensuring continuous operation.
 
 By following these steps, you can ensure that the bus booking process is automated and runs continuously without manual intervention.
