@@ -14,17 +14,45 @@ This document outlines the steps taken to deploy two projects, Nutrient-Tracker 
 
 ### Network Configuration
 - **TIP Project**: Mapped to port 3001 on localhost.
-- **Nutrient-Tracker Project**: Attempted to map to a chosen port on localhost.
+- **Nutrient-Tracker Project**: Mapped to port 3000 on localhost.
 
-### Network Types
-- **Bridge Network**: We used the bridge network for this setup because it provides the ideal balance of isolation, security, and inter-container communication for a local development environment. 
+## Setup Process
 
-## Deliverables
-### Setup Process
-1. **Dockerfiles**: Created Dockerfiles for both projects.
-2. **docker-compose.yml**: Configured the `docker-compose.yml` file to define services, networks, and volumes.
-3. **Running Containers**: Verified running containers using `docker ps`.
-4. **Accessing Websites**: Accessed the TIP project successfully on port 3001.
+### 1. Create Dockerfiles
+Create Dockerfiles for both projects to define the environment and dependencies.
+
+#### Nutrient-Tracker Dockerfile
+```Dockerfile
+# Use the official Ruby image as a parent image
+FROM ruby:2.7
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the Gemfile and Gemfile.lock into the image
+COPY Gemfile* ./
+
+# Install dependencies
+RUN bundle install
+
+# Copy the rest of the application code
+COPY . .
+
+# Expose port 3000 to the outside world
+EXPOSE 3000
+
+# Start the Rails server
+CMD ["rails", "server", "-b", "0.0.0.0"]
+```
+
+### 2. Configure docker-compose.yml
+Configure the `docker-compose.yml` file to define services, networks, and volumes.
+
+### 3. Running Containers
+Verify running containers using `docker ps`.
+
+### 4. Accessing Websites
+Access the TIP project successfully on port 3001.
 
 ### Issues Encountered
 - **Nutrient-Tracker Project**: Encountered issues with deploying the Nutrient-Tracker project. Despite configuring the Dockerfile and `docker-compose.yml`, the project did not run successfully on the chosen port.
