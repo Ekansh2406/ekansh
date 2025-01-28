@@ -1,11 +1,5 @@
 # Deployment Documentation
 
-## Overview
-This document outlines the steps taken to deploy two projects, Nutrient-Tracker and TIP, using Docker containers on localhost. The Nutrient-Tracker project is a Ruby on Rails application, while the TIP project is a Next.js application. Both projects were configured and deployed using Docker Compose.
-
-## Repositories
-- **Nutrient-Tracker**: A Ruby on Rails project.
-- **TIP**: A Next.js project.
 
 ## Tasks
 ### Deploy Both Projects Using Docker Compose
