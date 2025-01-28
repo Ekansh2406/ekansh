@@ -36,7 +36,6 @@ The program will not book buses if the booking is open and the code is not runni
 
 ### Using Cloud Task Scheduler
 
-1. **Windows Task Scheduler**: If you are using a Windows server, you can use the built-in Task Scheduler to run the program at specified intervals.
-2. **Cron Jobs**: For Linux-based servers, you can use cron jobs to schedule the program to run at regular intervals.
+1. **Cloud Task Scheduler**: You can  use cloud-based task schedulers like Google Cloud Scheduler or AWS CloudWatch Events to run the program 15 days before the booking opens.
 
 By following these steps, you can ensure that the bus booking process is automated and runs continuously without manual intervention.
