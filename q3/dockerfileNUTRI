@@ -1,8 +1,6 @@
-# Use Ruby 3.2.2 image
 FROM ruby:2.7.8
 
-# Install dependencies
-# Install SQLite3 and Node.js (no PostgreSQL)
+# Install SQLite3 and Node.js
 RUN apt-get update -qq && apt-get install -y nodejs sqlite3 libsqlite3-dev
 
 # Set working directory
