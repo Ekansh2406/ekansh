@@ -15,30 +15,6 @@
 ### 1. Create Dockerfiles
 Create Dockerfiles for both projects to define the environment and dependencies.
 
-#### Nutrient-Tracker Dockerfile
-```Dockerfile
-# Use the official Ruby image as a parent image
-FROM ruby:2.7
-
-# Set the working directory
-WORKDIR /app
-
-# Copy the Gemfile and Gemfile.lock into the image
-COPY Gemfile* ./
-
-# Install dependencies
-RUN bundle install
-
-# Copy the rest of the application code
-COPY . .
-
-# Expose port 3000 to the outside world
-EXPOSE 3000
-
-# Start the Rails server
-CMD ["rails", "server", "-b", "0.0.0.0"]
-```
-
 ### 2. Configure docker-compose.yml
 Configure the `docker-compose.yml` file to define services, networks, and volumes.
 
@@ -57,8 +33,3 @@ Access the TIP project successfully on port 3001.
 
 ## Conclusion
 While the TIP project was successfully deployed and accessible on port 3001, the Nutrient-Tracker project encountered deployment issues. Further troubleshooting is required to resolve the issues with the Nutrient-Tracker project.
-
-## Attachments
-- Dockerfiles for both projects.
-- `docker-compose.yml` script.
-- Screenshots of running containers and accessing the TIP project.
